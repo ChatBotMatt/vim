@@ -7,3 +7,6 @@
 [submodule "bundle/color-seoul256"]
 	path = bundle/color-seoul256
 	url = https://github.com/junegunn/seoul256.vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
