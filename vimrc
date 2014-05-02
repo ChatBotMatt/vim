@@ -10,6 +10,13 @@ filetype plugin indent on
 " Ctrl+B to check php syntax of the saved file
 map <C-B> :!php -l %<CR>
 
+" Comman remappings
+" for common :w mis-spellings
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
+
 filetype plugin on
 au FileType php set omnifunc=phpcomplete#CompletePHP
 
@@ -54,3 +61,6 @@ set directory=~/.vim/backupdir,/tmp,.
 " NERDTree autoopen etc
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
+
+" Syntastic php config
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
