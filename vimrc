@@ -21,9 +21,9 @@ filetype plugin on
 au FileType php set omnifunc=phpcomplete#CompletePHP
 
 syntax enable
-set background=dark
 colorscheme seoul256
 set list
+hi Normal ctermfg=252 ctermbg=NONE
 set listchars=tab:▸\ ,eol:¬
 
 if has("gui_running")
