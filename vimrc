@@ -75,3 +75,9 @@ autocmd VimEnter * wincmd p
 
 " Syntastic php config
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+
+
+" Trigger ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
