@@ -18,7 +18,7 @@ noremap ;; ;
 
 " toggle taglist window
 nnoremap <silent> <F2> :TlistToggle<CR>
-
+let Tlist_Use_Right_Window = 1
 
 
 " Comman remappings
