@@ -28,6 +28,9 @@ let Tlist_Use_Right_Window = 1
 :command W w
 :command Q q
 
+" keybinds
+set pastetoggle=<F3>
+
 filetype plugin on
 au FileType php set omnifunc=phpcomplete#CompletePHP
 
