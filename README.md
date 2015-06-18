@@ -4,6 +4,9 @@
 VIM configuration
 
 ```
+sudo apt-get install exuberant-ctags
 git clone https://github.com/jon-knight/.vim.git .vim
-ln -s ~/.vim/bundle/ultisnips/ftdetect ~/.vim/ftdetect
+cd .vim 
+git submodule init
+git submodule update
 ```
