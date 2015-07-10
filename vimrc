@@ -8,7 +8,18 @@ filetype plugin indent on
 " Can be typed even faster than jj.
 :imap jk <Esc>
 " Ctrl+B to check php syntax of the saved file
-map <C-B> :!php -l %<CR>
+"map <C-B> :!php -l %<CR> removed as it breaks page-down and its replaced by a
+"plugin
+
+" map ; to : to avoid pressing shift constantly, double tap to get ;
+" functionality
+map ; :
+noremap ;; ;
+
+" toggle taglist window
+nnoremap <silent> <F2> :TlistToggle<CR>
+let Tlist_Use_Right_Window = 1
+
 
 " Comman remappings
 " for common :w mis-spellings
@@ -16,6 +27,9 @@ map <C-B> :!php -l %<CR>
 :command Wq wq
 :command W w
 :command Q q
+
+" keybinds
+set pastetoggle=<F3>
 
 filetype plugin on
 au FileType php set omnifunc=phpcomplete#CompletePHP
