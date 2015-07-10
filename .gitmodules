@@ -31,3 +31,6 @@
 [submodule "bundle/vim-addon-mw-utils"]
 	path = bundle/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "bundle/phpcs.vim"]
+	path = bundle/phpcs.vim
+	url = https://github.com/vim-scripts/phpcs.vim

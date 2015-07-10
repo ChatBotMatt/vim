@@ -20,6 +20,12 @@ map <C-B> :!php -l %<CR>
 filetype plugin on
 au FileType php set omnifunc=phpcomplete#CompletePHP
 
+" coding style check, phpcs
+let g:phpcs_std_list="Zend, PEAR"
+inoremap <F5>  <ESC>:Phpcs<CR>
+inoremap <F7> <ESC>:cprev<CR>
+inoremap <F8> <ESC>:cnext<CR>
+
 syntax enable
 colorscheme seoul256
 set list
