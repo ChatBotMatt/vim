@@ -8,8 +8,19 @@ filetype plugin indent on
 " Can be typed even faster than jj.
 :imap jk <Esc>
 
+" Ctrl+B to check php syntax of the saved file
+"map <C-B> :!php -l %<CR> removed as it breaks page-down and its replaced by a
+"plugin
+
+" map ; to : to avoid pressing shift constantly, double tap to get ;
+" functionality
 map ; :
 noremap ;; ;
+
+" toggle taglist window
+nnoremap <silent> <F2> :TlistToggle<CR>
+let Tlist_Use_Right_Window = 1
+
 
 " Comman remappings
 " for common :w mis-spellings
@@ -18,8 +29,17 @@ noremap ;; ;
 :command W w
 :command Q q
 
+" keybinds
+set pastetoggle=<F3>
+
 filetype plugin on
 au FileType php set omnifunc=phpcomplete#CompletePHP
+
+" coding style check, phpcs
+let g:phpcs_std_list="Zend, PEAR"
+inoremap <F5>  <ESC>:Phpcs<CR>
+inoremap <F7> <ESC>:cprev<CR>
+inoremap <F8> <ESC>:cnext<CR>
 
 syntax enable
 colorscheme seoul256
@@ -68,3 +88,9 @@ autocmd VimEnter * wincmd p
 
 " Syntastic php config
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+
+
+" Trigger ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
