@@ -34,6 +34,8 @@ set pastetoggle=<F3>
 filetype plugin on
 au FileType php set omnifunc=phpcomplete#CompletePHP
 
+let Vimphpcs_Standard='PSR2'
+
 syntax enable
 colorscheme seoul256
 set list
