@@ -7,6 +7,7 @@ filetype plugin indent on
 " Keyboard remappings
 " Can be typed even faster than jj.
 :imap jk <Esc>
+
 " Ctrl+B to check php syntax of the saved file
 "map <C-B> :!php -l %<CR> removed as it breaks page-down and its replaced by a
 "plugin
@@ -34,7 +35,11 @@ set pastetoggle=<F3>
 filetype plugin on
 au FileType php set omnifunc=phpcomplete#CompletePHP
 
-let Vimphpcs_Standard='PSR2'
+" coding style check, phpcs
+let g:phpcs_std_list="Zend, PEAR"
+inoremap <F5>  <ESC>:Phpcs<CR>
+inoremap <F7> <ESC>:cprev<CR>
+inoremap <F8> <ESC>:cnext<CR>
 
 syntax enable
 colorscheme seoul256
@@ -69,6 +74,9 @@ set hlsearch
 set ignorecase
 set smartcase
 set incsearch
+
+" filetype for syntax hilighting
+autocmd BufNewFile,BufReadPost *.log* :set filetype=messages
 
 " use one location for all backup files, failing that use tmp and then cwd
 set backupdir=~/.vim/backupdir,/tmp,.
